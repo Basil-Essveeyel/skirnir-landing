@@ -3,18 +3,35 @@
    Modern, premium aesthetic for luxury experience management
 */
 
+/* Import Oxygen fonts */
+@font-face {
+    font-family: 'Oxygen';
+    src: url('../fonts/Oxygen-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oxygen';
+    src: url('../fonts/Oxygen-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
-    /* Primary colors - placeholder for brand colors */
-    --primary: #1E40AF;       /* Deep blue */
-    --primary-light: #3B82F6; /* Lighter blue for hover states */
-    --primary-dark: #1E3A8A;  /* Darker blue for active states */
+    /* Primary colors - Skirnir brand colors */
+    --primary: #D14712;       /* Skirnir orange/red */
+    --primary-light: #E65E2C; /* Lighter orange for hover states */
+    --primary-dark: #A33609;  /* Darker orange for active states */
     
     /* Secondary colors */
-    --secondary: #6B21A8;     /* Purple */
-    --accent: #D97706;        /* Gold/amber for accents */
+    --secondary: #213547;     /* Skirnir dark blue/gray */
+    --accent: #646CFF;        /* Accent blue */
     
     /* Neutrals */
-    --dark: #111827;          /* Near black for text */
+    --dark: #213547;          /* Skirnir text color */
     --medium: #4B5563;        /* Medium gray for secondary text */
     --light: #F3F4F6;         /* Light gray for backgrounds */
     --white: #FFFFFF;         /* White */
@@ -25,8 +42,8 @@
     --error: #EF4444;         /* Red */
     
     /* Typography */
-    --body-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --heading-weight: 600;
+    --body-font: 'Oxygen', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --heading-weight: 700;
     --body-weight: 400;
     
     /* Spacing */
@@ -158,17 +175,17 @@ section {
 }
 
 .btn-primary {
-    background-color: var(--primary);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: var(--white);
-    border: 2px solid var(--primary);
+    border: none;
+    box-shadow: 0 4px 12px rgba(209, 71, 18, 0.4);
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-light);
-    border-color: var(--primary-light);
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
     color: var(--white);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 6px 16px rgba(209, 71, 18, 0.5);
 }
 
 .btn-secondary {
@@ -234,6 +251,7 @@ header {
     padding: var(--spacing-md) 0;
     position: relative;
     background: linear-gradient(to right, var(--white) 50%, var(--light) 50%);
+    font-family: 'Oxygen', sans-serif;
 }
 
 nav {
@@ -351,6 +369,9 @@ nav {
     font-size: 2rem;
     color: var(--primary);
     margin-bottom: var(--spacing-sm);
+    background: -webkit-linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Solutions Section */
@@ -543,7 +564,7 @@ nav {
 
 /* CTA Section */
 .cta-section {
-    background-color: var(--primary);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: var(--white);
     padding: var(--spacing-xl) 0;
     position: relative;
