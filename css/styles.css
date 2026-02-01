@@ -30,11 +30,11 @@
     --primary-dark: #A33609;  /* Darker orange for active states */
     
     /* Secondary colors */
-    --secondary: #213547;     /* Skirnir dark blue/gray */
+    --secondary: #000000;     /* Black instead of dark blue/gray */
     --accent: #646CFF;        /* Accent blue */
     
     /* Neutrals */
-    --dark: #213547;          /* Skirnir text color */
+    --dark: #000000;          /* Black for text instead of dark blue */
     --medium: #4B5563;        /* Medium gray for secondary text */
     --light: #F3F4F6;         /* Light gray for backgrounds */
     --white: #FFFFFF;         /* White */
@@ -114,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: var(--heading-weight);
     line-height: 1.2;
     margin-bottom: var(--spacing-sm);
-    color: var(--dark);
+    color: black;
 }
 
 h1 {
@@ -160,6 +160,10 @@ p {
     text-align: center;
     max-width: 800px;
     margin: 0 auto var(--spacing-lg);
+}
+
+.section-header h2 {
+    color: black;
 }
 
 section {
@@ -678,7 +682,7 @@ nav {
 
 /* Footer */
 footer {
-    background-color: var(--dark);
+    background-color: black;
     color: var(--light);
     padding: var(--spacing-lg) 0 var(--spacing-md);
 }
