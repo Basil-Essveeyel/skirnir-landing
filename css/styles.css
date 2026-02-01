@@ -20,6 +20,9 @@
     font-display: swap;
 }
 
+/* Fallback Google Font import in case local files don't load */
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap');
+
 :root {
     /* Primary colors - Skirnir brand colors */
     --primary: #D14712;       /* Skirnir orange/red */
@@ -175,14 +178,15 @@ section {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    background: linear-gradient(135deg, #D14712 0%, #A33609 100%);
     color: var(--white);
     border: none;
     box-shadow: 0 4px 12px rgba(209, 71, 18, 0.4);
+    font-family: 'Oxygen', sans-serif;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+    background: linear-gradient(135deg, #E65E2C 0%, #D14712 100%);
     color: var(--white);
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(209, 71, 18, 0.5);
