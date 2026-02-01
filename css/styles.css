@@ -254,8 +254,15 @@ section {
 header {
     padding: var(--spacing-md) 0;
     position: relative;
-    background: linear-gradient(to right, var(--white) 50%, var(--light) 50%);
+    background: linear-gradient(to right, var(--white) 50%, #F3F4F6 50%);
     font-family: 'Oxygen', sans-serif;
+}
+
+h1 {
+    color: #D14712;
+    background: linear-gradient(135deg, #D14712 0%, #A33609 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 nav {
